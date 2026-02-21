@@ -1519,16 +1519,16 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
                     PC-Alfa1 > Command Prompt
                 </div>
                 <div class="code-body">
-<span class="cmd">C:\&gt;</span> ping <span class="placeholder">192.168.0.______</span>  <span class="comment">&lt;-- IP di PC-Beta1</span>
+<span class="cmd">C:\&gt;</span> ping <span class="placeholder">192.168.0.34</span>  <span class="comment">&lt;-- IP di PC-Beta1</span>
 
-<span class="output">Pinging 192.168.0.______ with 32 bytes of data:</span>
+<span class="output">Pinging 192.168.0.34 with 32 bytes of data:</span>
 
 <span class="highlight">Request timed out.</span>
 <span class="highlight">Request timed out.</span>
 <span class="highlight">Request timed out.</span>
 <span class="highlight">Request timed out.</span>
 
-<span class="output">Ping statistics for 192.168.0.______:</span>
+<span class="output">Ping statistics for 192.168.0.34:</span>
 <span class="output">    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss)</span>
                 </div>
             </div>
@@ -1547,9 +1547,7 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
     </div>
 
     <div class="img-placeholder">
-        <div class="icon">❌</div>
-        <div class="label">[IMG_19] — Output del comando ping da PC-Alfa1 verso PC-Beta1 (fallimento - Request timed out)</div>
-        <div class="hint">Cattura il Command Prompt di PC-Alfa1 con il ping fallito verso un IP della Rete Beta</div>
+        <img src="screenshot_ping_fallito_a1b1.png">
     </div>
 
     <h3>Analisi nella Simulation Mode del ping fallito</h3>
@@ -1572,9 +1570,7 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
     </div>
 
     <div class="img-placeholder">
-        <div class="icon">🚫</div>
-        <div class="label">[IMG_20] — Simulation Mode: il pacchetto da PC-Alfa1 verso PC-Beta1 viene scartato (X rossa)</div>
-        <div class="hint">Cattura la topologia in Simulation Mode mostrando la X rossa sul pacchetto scartato</div>
+        <img src="screenshot_pacchetto_scartato_a1b1.png">
     </div>
 
     <div class="step">
@@ -1591,9 +1587,7 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
     </div>
 
     <div class="img-placeholder">
-        <div class="icon">📋</div>
-        <div class="label">[IMG_21] — PDU Information del pacchetto scartato: motivo dello scarto</div>
-        <div class="hint">Cattura la finestra PDU che mostra il messaggio di errore o la spiegazione dello scarto</div>
+        <img src="screenshot_pdu_pacchetto_scartato.png">
     </div>
 
     <div class="exercise-box">
@@ -1606,7 +1600,11 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
             <li><code>PC-Beta1</code> → <code>PC-Gamma1</code> (Rete Beta → Rete Gamma)</li>
         </ol>
         <p>
-            Annota i risultati e rispondi: perché tutti falliscono? Cosa servirebbe per farli comunicare?
+            Annota i risultati e rispondi: perché tutti falliscono?
+			I risultati falliscono perchè non appartengono alla stessa sottorete, quindi non si vedono.
+			
+			Cosa servirebbe per farli comunicare?
+			servirebbe un router da configurare come "cancello" (gateway) per mettere in comunicazione le varie sottoreti
         </p>
     </div>
 
